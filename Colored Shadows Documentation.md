@@ -17,15 +17,7 @@ After you have imported the core library go to your Universal Render Pipeline As
 
 
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image1.png "image_tooltip")
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
 
 ![alt_text](images/image2.png "image_tooltip")
 
@@ -38,18 +30,10 @@ To test if it works, open the SampleColShadowScene in the sample folder.
 Set the _ShadowID on the object casting a shadow to something above 1 (preferably whole numbers).
 
 
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image3.png "image_tooltip")
 
 
 Make a new shader for the floor and add the “SampleColShadow_With_UV_ObjectSize” to the shadergraph. And connect the ShadowID value to the color. The _ShadowID value you set on the cube is the ShadowID value you get from the SampleColShadow shader graph node in the floor shader.
-
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image4.png "image_tooltip")
@@ -58,18 +42,10 @@ Make a new shader for the floor and add the “SampleColShadow_With_UV_ObjectSiz
 After having set the ShadowID to the base color you should now see something like this. If you set the _ShadowID on the cube to 0.5 you should see the shadow gets darker and if you set it to 1 it should be fully white.
 
 
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image5.png "image_tooltip")
 
 
 Now add a second cube and give it a copy of the material of the cube and give it a _ShadowID of 2.
-
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image6.png "image_tooltip")
@@ -78,18 +54,10 @@ Now add a second cube and give it a copy of the material of the cube and give it
 To give both cubes a differently colored shadow we use the _ShadowID set on the cube as a mask to differentiate between the two shadows. We check if the ShadowID given to use by the SampleColShadow node matches with our ShadowID values set on the cubes. We use a comparison node to give us a mask that is 1 for the object's shadow that has a matching ShadowID. Then we multiply it with whatever color we want.
 
 
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image7.png "image_tooltip")
 
 
 You should now see something like this if you set _ShadowID values on the cube to a 1 and a 2.
-
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image8.png "image_tooltip")
@@ -98,18 +66,10 @@ You should now see something like this if you set _ShadowID values on the cube t
 To set the color for the rest of the material we use the mask value given to us from the SampleColShadow node and a lerp. The mask value is a 1 everywhere a shadow is and 0 where there is none. We use a lerp where in the A slot is our generic floor texture, in the B slot is our custom shadow, and in the T is our mask which we use to blend the 2 together. We can also multiply the mask with for example 0.5 to get a softer blend between the floor and shadows.
 
 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image9.png "image_tooltip")
 
 
 We should now see our floor texture blended with our custom shadows.
-
-
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image10.png "image_tooltip")
@@ -121,28 +81,16 @@ We should now see our floor texture blended with our custom shadows.
 To add an animated offset we use the UVOffset or PosOffset on the SampleColShadow shader node in the floor shader.
 
 
-
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image11.png "image_tooltip")
 
 
 For this example I used the PosOffset and created a simple scrolling noise texture that I plugged into the PosOffset. You should see your shadows now moving in waves across the floor. To learn the nuances between UVOffset and PosOffset refer to the documentation.
 
 
-
-<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image12.png "image_tooltip")
 
 
 The result
-
-
-
-<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image13.png "image_tooltip")
@@ -154,18 +102,10 @@ The result
 We start by adding a ShadowUV node and plugging ShadowUV, ShadowSize, LightUV into the ShadowUV like the example below.
 
 
-
-<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image14.png "image_tooltip")
 
 
 Then we plug the generated UV’s into a texture sample node and plug that into our mask.
-
-
-
-<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image15.png "image_tooltip")
@@ -174,18 +114,10 @@ Then we plug the generated UV’s into a texture sample node and plug that into 
 Our texture is mapped but the uv size is incorrect so our texture gets repeated. To fix this we need to change the ShadowUVMultiplier variable on the ShadowUV node.
 
 
-
-<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image16.png "image_tooltip")
 
 
 After having set the ShadowUVMultiplier value to 3 and adding a sampler set to clamp on the texture sample node we get our desired result.
-
-
-
-<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image17.png "image_tooltip")
@@ -197,18 +129,10 @@ After having set the ShadowUVMultiplier value to 3 and adding a sampler set to c
 We start with 2 custom lights both casting a shadow on the cube.
 
 
-
-<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image18.png "image_tooltip")
 
 
 We set the “Add To Shadow ID” on the custom light component to 1.
-
-
-
-<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image19.png "image_tooltip")
@@ -217,18 +141,10 @@ We set the “Add To Shadow ID” on the custom light component to 1.
 The ShadowID from the SampleColShadow node in the floor shader is the _ShadowID from the cube plus the “AddToShadowID” value from the custom light. So because we set the cube _ShadowID to 1 and the “AddToShadowID” to 1 our ShadowID in the floor shader is 2 (because they both get added to each other 1 + 1 = 2). And this is what our final shader looks like. The shadow cast from the custom light with an “AddToShadowID” of 0 casts a shadow with ShadowID of 1 (1 + 0 = 1) which becomes red, and the shadow cast from the custom light with an “AddToShadowID” of 1 casts a shadow with ShadowID of 2 (1 + 1 = 2) which becomes blue.
 
 
-
-<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image20.png "image_tooltip")
 
 
 Final result.
-
-
-
-<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image21.png "image_tooltip")
@@ -240,18 +156,10 @@ Final result.
 First make sure you have the Visual Effect Graph package installed. Enable the “Enable VFX Support” in the custom light component. This adds 2 passes which generate a buffer filled with the world positions of the shadow (this does create extra performance so turn it off if you are not using vfx.
 
 
-
-<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image22.png "image_tooltip")
 
 
 Add a new layer and add it to the object casting the shadow.
-
-
-
-<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image23.png "image_tooltip")
@@ -260,18 +168,10 @@ Add a new layer and add it to the object casting the shadow.
 Then deselect that layer in the Shadow Receiving layermask.
 
 
-
-<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image24.png "image_tooltip")
 
 
 Create a VFX effect and create a “_Shadowpositions” graphics buffer and a “_ShadowPositionsCount” int.
-
-
-
-<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image25.png "image_tooltip")
@@ -280,18 +180,10 @@ Create a VFX effect and create a “_Shadowpositions” graphics buffer and a �
 Add the “Sample Shadow_Subgraph Operator” node and plug the _ShadowPositions and _ShadowPositionsCount variable into the node.
 
 
-
-<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image26.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image26.png "image_tooltip")
 
 
 After setting up the VFX graph add it to the “Visual Effects” list in the custom light component so that the buffer and count get updated.
-
-
-
-<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image27.png "image_tooltip")
@@ -300,18 +192,10 @@ After setting up the VFX graph add it to the “Visual Effects” list in the cu
 Here is a simple example to test if it’s working
 
 
-
-<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image28.png "image_tooltip")
 
 
 If you did everything correctly you should now have something similar to the image below.
-
-
-
-<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image29.png "image_tooltip")
@@ -320,10 +204,6 @@ If you did everything correctly you should now have something similar to the ima
 
 ## Custom Light
 
-
-
-
-<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image30.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image30.png "image_tooltip")
@@ -423,18 +303,10 @@ If you set a constant shadow size instead of the one given to you by the “Samp
 Indepent size
 
 
-
-<p id="gdcalert31" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image31.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert32">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image31.png "image_tooltip")
 
 
 Relative size
-
-
-
-<p id="gdcalert32" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image32.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert33">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image32.png "image_tooltip")
@@ -452,10 +324,6 @@ This is a list of all the visual effects that you want to have access to the sha
 
 
 ## Sample Colored Shadow Node
-
-
-
-<p id="gdcalert33" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image33.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert34">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image33.png "image_tooltip")
@@ -478,18 +346,10 @@ Float2 value that gets added to the shadow mapped uv before sampling the shadow 
 Float3 that gets added to the world position before calculating the shadow mapped uv. Because this offset gets added to the world position before any calculations the offset is in world space and not relative like uv offset.
 
 
-
-<p id="gdcalert34" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image34.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert35">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image34.png "image_tooltip")
 
 
 *No offset for reference*
-
-
-
-<p id="gdcalert35" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image35.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert36">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image35.png "image_tooltip")
@@ -510,18 +370,10 @@ If you set a constant shadow size instead of the one given to you by the “Samp
 Indepent size
 
 
-
-<p id="gdcalert36" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image36.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert37">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![alt_text](images/image36.png "image_tooltip")
 
 
 Relative size
-
-
-
-<p id="gdcalert37" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image37.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert38">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
 ![alt_text](images/image37.png "image_tooltip")
