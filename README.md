@@ -4,7 +4,7 @@
 
 ## What is it
 
-ColoredShadows is a library to be used together with shadergraph to easily create customized shadows inside of Unity URP.
+ColoredShadows is a library to be used together with shadergraph to easily create customized shadows inside of Unity URP. [Showcase](https://www.youtube.com/watch?v=EGfLyAoTz_A)
 
 
 ## Guides
